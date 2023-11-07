@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulář - evidence milenek/milenců</title>
+    <style>
+        .textDiv label{
+          margin-top: 10px; 
+          display: block;
+        }
+        input[type="date"] {
+          font-size: 15px;
+          width: 175px;
+          height: 20px;
+         }
+
+        
+        body{
+            background-color: pink;
+            text-align: center;
+            font-size: x-large;
+        }
+        .radioDiv{
+          margin-top: 10px; 
+        }
+        
+        .fillDiv{
+          margin-top: 10px;  
+        }
+        .ranDiv{
+          margin-top: 10px;  
+        }
+        .selDiv{
+          margin-top: 10px;  
+        }
+        .subDiv{
+          margin-top: 10px;  
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Evidence milenek/milenců</h1>
+    <form>
+        <div class="textDiv">
+            <label for="jmeno">Jméno</label>
+            <input type="text" id="jmeno" name="jmeno" maxlength="15" required>
+            <label for="prijmeni">Příjmení</label>
+            <input type="text" id="prijmeni" name="prijmeni" maxlength="15" required>
+            <label for="bydliste">Bydliště</label>
+            <input type="text" id="bydliste" name="bydliste" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="pavlicek@spsejecna.cz" required>
+            <label for="telCislo">Telefonní číslo</label>
+            <input type="tel" id="telCislo" name="telCislo" placeholder="123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+            <label for="datum">Datum narození</label >
+            <input type="date" id="datum" name="datum" required>
+            
+        </div><br>
+        <div class="radioDiv">
+            <label for="pohlavi1">Muž</label>
+            <input type="radio" id="pohlavi1" name="pohlavi">
+            <label for="pohlavi2">Žena</label>
+            <input type="radio" id="pohlavi2" name="pohlavi">
+        </div>
+        <div class="fillDiv"> 
+            <label for="fotka">Fotka</label>
+            <input type="file" name="fotka" id="fotka">
+        </div><br>
+        <div class="ranDiv">
+            <label for="range">Jak dobrý vztah jsi měl k dané osobě</label><br>
+            <label for="range">Příšerný</label>
+            <input type="range" name="range" id="range">
+            <label for="range">Úžastný</label>
+        </div>
+        <div class="selDiv">
+            <label for="barva">Barva</label>
+            <select id="barva" name="barva" >
+                <option>Normální</option>
+                <option>Nažloutlý/á</option>
+                <option>Spálený</option>
+            </select>
+        </div>
+        <div class="subDiv">
+            <input type="submit" name="submit" id="submit" value="potvrdit">
+        </div>
+
+    </form>
+</body>

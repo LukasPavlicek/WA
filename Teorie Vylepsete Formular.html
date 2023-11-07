@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>TV dotazník</title>
+    <style>
+
+.divForm {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        .divForm > div {
+            flex: 1;
+        }
+
+    
+    </style>
+     
+</head>
+<body>
+    <h1>TV dotazník</h1>
+    <form action="" method="post">
+
+      <div class="divForm">
+        <div>
+            <label for="jmeno">Jméno a příjmení</label>
+        </div>
+        <div>
+            <input type="text" id="jmeno" name="jmeno" required>
+        </div> 
+    </div>
+    
+    <div class="divForm">
+        <div>
+        <label for="kolik">Kolik vám je let?</label>
+        </div>
+        <div>
+        <input type="radio" id="vek18" name="vek" value="18" required>
+        <label for="vek18">18 a méně</label><br>
+
+        <input type="radio" id="vek64" name="vek" value="19" required>
+        <label for="vek64">19 až 64</label><br>
+
+        <input type="radio" id="vek65" name="vek" value="65" required>
+        <label for="vek65">65 a více</label>
+        </div>
+    </div>         
+    <div class="divForm">
+        <div>
+            <label for="typ">V jakých zařízeních sledujete ČT?</label>
+        </div>
+        <div>
+            <input type="checkbox" id="tvTelevize" name="tv[]" value="Televize">
+        <label for="tvTelevize">Televize</label><br>
+
+        <input type="checkbox" id="tvPocitac" name="tv[]" value="Počítač">
+        <label for="tvPocitac">Počítač</label><br>
+
+        <input type="checkbox" id="tvMobil" name="tv[]" value="Mobil">
+        <label for="tvMobil">Mobil</label>
+        </div>
+        
+    </div>
+    <div class="divForm">
+        <div>
+            <label for="libi">Co se vám líbí na TV?</label>
+        </div>
+        <div>
+            <textarea id="libi" name="libi" rows="4" cols="50"></textarea>
+        </div>
+    </div>
+       
+    <div class="divForm">
+        <div>
+            <label for="kolik">Jakou výši poplatků jste ochotni platit?</label>
+        </div>
+        <div>
+                <select id="kolik" name="kolik" required>
+                    <option>100 kč</option>
+                    <option>200 kč</option>
+                    <option>300 kč</option>
+                    <option>400 kč</option>
+                    <option>500 kč</option>
+                </select>
+        </div>
+        
+    </div>
+    <div>
+        <input type="submit" value="Odeslat">
+    </div>
+    </form>
+</body>
+</html>

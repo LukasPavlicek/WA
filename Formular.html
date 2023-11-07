@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formular</title>
+    <style>
+        .radio-div label {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .checkbox-div label {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .checkbox-div2 label {
+            display: inline-block;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body style="text-align:center">
+    <h1>Anketní formulář</h1>
+    <h3>Výběr nejlepšího učitele</h3><br>
+    <form action="http://jecna.lmsoft.cz/form.php">
+        <label for=jmenoVyplnujiciho style="font-size:120%;">Vaše jméno</label><br>
+        <input type="text" id="jmenoVyplnujiciho" name="jmenoVyplnujiciho"><br><br>
+        <label for=emailVyplnujiciho style="font-size:120%;">Vaš email</label><br>
+        <input type="text" id="emailVyplnujiciho" name="emailVyplnujiciho"><br><br>
+        <label for=skolaVyplnujiciho style="font-size:120%;">Vaše škola</label><br>
+        <input type="text" id="skolaVyplnujiciho" name="skolaVyplnujiciho"><br><br>
+
+        <h3>Vyberte nejlepšího učitele</h3>
+        <div class="radio-div">
+            <input type="radio" id="Masopust" name="jmenoNejUcitele" value="Masopust">
+            <label>Masopust</label>
+            <input type="radio" id="Mandik" name="jmenoNejUcitele" value="Mandik">
+            <label>Mandík</label>
+            <input type="radio" id="Mazuch" name="jmenoNejUcitele" value="Mazuch">
+            <label>Mazuch</label>
+        </div><br>
+
+        <label for="image">Vložte obrázek svého oblíbeného učitele</label><br>
+        <input type="file" name="image" id="image"><br>
+
+        <h3>Vyberte jaké vlastnosti má váš učitel</h3>
+        <div class="checkbox-div">
+            <input type="checkbox" id="hodny" name="vlastnostiUcitele" value="hodny">
+            <label> hodný</label>
+            <input type="checkbox" id="duverivy" name="vlastnostiUcitele" value="duverivy">
+            <label> důvěřivý</label>
+            <input type="checkbox" id="gurmansky" name="vlastnostiUcitele" value="gurmansky">
+            <label> gurmánský</label><br>
+        </div>
+        <div class="checkbox-div2">
+            <input type="checkbox" id="nadany" name="vlastnostiUcitele" value="nadany">
+            <label> nadaný</label>
+            <input type="checkbox" id="ochotny" name="vlastnostiUcitele" value="ochotny">
+            <label> ochotný</label>
+            <input type="checkbox" id="uprimny" name="vlastnostiUcitele" value="uprimny">
+            <label> upřímný</label><br><br>
+        </div>
+
+        <label for="textOUciteli" style="font-size: 110%;">Krátký text o vašem oblíbeném učiteli</label><br>
+        <textarea name="textOUciteli" id=textOUciteli rows="5" cols="28"></textarea><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
